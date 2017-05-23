@@ -1,12 +1,15 @@
 <?php
 $host = 'localhost';
-$dbName = 'socialnet';
 $username = 'root';
 $password = '';
 try
 {
-	$conn = new PDO("mysql:host=".$host.";dbname=".$dbName, $username, $password);
+	$conn = new PDO("mysql:host=".$host.", $username, $password);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$sql = "CREATE DATABASE IF NOT EXISTS socialnet";
+	$conn->exec($sql);
+	$sql = "use socialnet";
+	$conn->exec($sql);
 }
 catch(PDOException $e)
 {
