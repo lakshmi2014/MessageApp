@@ -20,6 +20,9 @@
        <li>
           <a href ="members.php">Members</a>        
       </li>
+      <li>
+      <a href ="messages.php">Inbox<span class ="badge"></span></a>
+      </li>
       <li><a href ="logout.php">Logout</a></li>
         
        
